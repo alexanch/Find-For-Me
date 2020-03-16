@@ -17,7 +17,6 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 
 # Some utilites
-import sklearn
 from sklearn.metrics import pairwise_distances
 import numpy as np
 import pandas as pd

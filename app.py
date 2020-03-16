@@ -1,8 +1,5 @@
-import os
-import sys
 # Flask
-from flask import Flask, redirect, url_for, request, render_template, Response, jsonify
-from werkzeug.utils import secure_filename
+from flask import Flask, request, render_template, jsonify
 from gevent.pywsgi import WSGIServer
 
 # TensorFlow and tf.keras

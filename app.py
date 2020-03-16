@@ -33,7 +33,7 @@ app = Flask(__name__)
 #print('Model loaded. Check http://127.0.0.1:5000/')
 
 # Model saved with Keras model.save()
-MODEL_PATH = 'models/resnet50_embed.h5'
+MODEL_PATH = 'https://drive.google.com/uc?export=download&id=1LKA8sV9Wz8yRc88TRsmkAcpG0y5Sojp_'
 # Load your own trained model
 model = load_model(MODEL_PATH)
 model._make_predict_function()          # Necessary

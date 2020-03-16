@@ -1,8 +1,8 @@
-runtime: custom
+runtime: python
 env: flex
 readiness_check:
-  app_start_timeout_sec: 1800
+app_start_timeout_sec: 1800
 resources:
-  cpu: 2
-  memory_gb: 12
-  disk_size_gb: 100
+cpu: 2
+memory_gb: 12
+disk_size_gb: 100

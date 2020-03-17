@@ -1,2 +1,5 @@
 runtime: python
 env: flex
+
+resources:
+  memory_gb: 4

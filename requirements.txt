@@ -1,3 +1,4 @@
+pip>19.0
 Werkzeug
 Flask
 gunicorn

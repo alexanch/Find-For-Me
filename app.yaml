@@ -1,2 +1,11 @@
 runtime: python37
-entrypoint: gunicorn -b :$PORT main:app
+env: flex
+entrypoint: gunicorn -b :$PORT app:app
+
+readiness_check:
+  app_start_timeout_sec: 1800
+
+resources:
+ cpu: 2
+ memory_gb: 12
+ disk_size_gb: 100

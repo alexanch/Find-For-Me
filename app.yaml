@@ -1,6 +1,6 @@
-runtime: python3
+runtime: python
 env: flex
-entrypoint: gunicorn -b :$PORT main:app
+entrypoint: gunicorn -b :$PORT app:app
 
 readiness_check:
   app_start_timeout_sec: 1800

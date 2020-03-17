@@ -7,6 +7,6 @@ Keras
 gevent
 pillow
 h5py
-tensorflow
+tensorflow==2.0
 sklearn
 pandas

@@ -9,5 +9,3 @@ runtime: python37
 # cpu: 2
 # memory_gb: 12
 # disk_size_gb: 100
-resources:
-  memory_gb: 4

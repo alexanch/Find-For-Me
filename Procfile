@@ -1,0 +1,1 @@
+weg: gunicorn app:app

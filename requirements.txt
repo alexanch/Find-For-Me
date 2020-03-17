@@ -1,5 +1,6 @@
 Werkzeug
-Flask
+Flask==0.10.1
+gunicorn==19.3.0
 numpy
 Keras
 gevent

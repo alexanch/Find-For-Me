@@ -1,5 +1,6 @@
 runtime: python
 env: flex
+entrypoint: gunicorn -b :$PORT main:app
 
-resources:
-  memory_gb: 4
+readiness_check:
+  app_start_timeout_sec: 1800

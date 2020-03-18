@@ -33,12 +33,10 @@ app = Flask(__name__)
 #print('Model loaded. Check http://127.0.0.1:5000/')
 import urllib.request
 # Model saved with Keras model.save()
-MODEL_PATH = 'https://drive.google.com/uc?export=download&id=1LKA8sV9Wz8yRc88TRsmkAcpG0y5Sojp_'
-print('Downloading the model...')
-urllib.request.urlretrieve(MODEL_PATH, 'models/model.h5')
-print('Model is downloaded.')
+#MODEL_PATH = 'https://drive.google.com/uc?export=download&id=1LKA8sV9Wz8yRc88TRsmkAcpG0y5Sojp_'
+#urllib.request.urlretrieve(MODEL_PATH, 'models/model.h5')
 # Load your own trained model
-model = load_model('models/model.h5')
+model = load_model('model.h5')
 model._make_predict_function()          # Necessary
 print('Model loaded. Start serving...Check http://127.0.0.1:5000/')
 
@@ -101,7 +99,7 @@ def predict():
     return None
 
 if __name__ == '__main__':
-    app.run(port=5000, threaded=False)
+    app.run(port=5002, threaded=False)
     # Serve the app with gevent
     http_server = WSGIServer(('0.0.0.0', 5000), app)
     http_server.serve_forever()

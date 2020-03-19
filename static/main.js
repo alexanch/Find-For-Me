@@ -68,6 +68,7 @@ function submitImage() {
     return;
   }
   loader.classList.remove("hidden");
+  document.getElementById('pred-result2').classList.remove('hidden');
   // call the predict function of the backend
   predictImage(imgPreview.src);
 }
@@ -125,11 +126,12 @@ function displayGrid(data){
     var text = '';
     for (i in obj) {
         //
-        var newDiv = document.createElement("div");
+        var newDiv = document.createElement("section");
+
         //
         var shortDescription = document.createElement("p"), Price = document.createElement("p"), img = new Image();
         img.src = obj[i]['images.model'];
-        img.className = 'img-demo';
+        img.className = 'pred-img';
         newDiv.appendChild(img);
         //
         shortDescription.innerText = obj[i]['shortDescription'];

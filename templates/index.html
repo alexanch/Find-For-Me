@@ -1,13 +1,12 @@
 {% extends "base.html" %} {% block content %}
 
-<div class="main">
+
+<div class = 'center' style="margin-top: 1.4em">
   <div class="title">
     <!-- <p>
       <small>A web app demo</small>
     </p> -->
   </div>
-
-  <input type="image" id="button-cloth" class="button2 hidden" onclick="clearImage();" src="../static/button.png"/>
 
   <div class="panel" id="panel">
     <input id="file-upload" class="hidden" type="file" accept="image/x-png,image/gif,image/jpeg"/>
@@ -23,8 +22,11 @@
   <div style="margin-bottom: 2rem;">
     <input type="button" value="SUBMIT" id='submit-button' class="button" onclick="submitImage();"/>
   </div>
+</div>
 
-  <div id="pred-result2" class="img-demo"></div>
+<input type="image" id="button-cloth" class="button2 hidden" onclick="clearImage();" src="../static/button.png"/>
+<div class="main">
+  <div id="pred-result2" class=""></div>
 </div>
 
 {% endblock %}

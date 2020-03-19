@@ -85,7 +85,7 @@ def predict():
         # indices = pd.Series(range(len(df)), index=df.index)
         # return top-10 similar items for input image. It's index in the dataframe is 5000 (the last row)
         #idx_rec, idx_sim = get_recommender(5000, df, cosine_sim, indices, top_n=10)
-        top_n = 3
+        top_n = 5
         sim_scores = list(enumerate(cosine_sim[-1]))
         sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
         sim_scores = sim_scores[1:top_n + 1]

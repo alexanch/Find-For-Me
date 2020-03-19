@@ -7,7 +7,8 @@
     </p> -->
   </div>
 
-  <div class="panel">
+  <input type="image" id="button-cloth" class="button2 hidden" onclick="clearImage();" src="../static/button.png"/>
+  <div class="panel" id="panel">
     <input id="file-upload" class="hidden" type="file" accept="image/x-png,image/gif,image/jpeg"/>
     <label for="file-upload" id="file-drag" class="upload-box">
       <div id="upload-caption">Drop image here or click to select</div>
@@ -15,8 +16,7 @@
     </label>
   </div>
   <div style="margin-bottom: 2rem;">
-    <input type="button" value="Submit" class="button" onclick="submitImage();"/>
-    <input type="button" value="Clear" class="button" onclick="clearImage();"/>
+    <input type="button" value="SUBMIT" class="button" onclick="submitImage();"/>
   </div>
 
   <div id="image-box">
@@ -27,8 +27,8 @@
     </svg>
   </div>
 
-  <div id="pred-result2" class="img-demo"></div>
 
+  <div id="pred-result2" class="img-demo"></div>
 </div>
 
 {% endblock %}

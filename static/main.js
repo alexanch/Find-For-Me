@@ -37,6 +37,8 @@ var imageDisplay = document.getElementById("image-display");
 var uploadCaption = document.getElementById("upload-caption");
 var predResult = document.getElementById("pred-result");
 var loader = document.getElementById("loader");
+var buttonCloth = document.getElementById("button-cloth")
+var panel = document.getElementById('panel')
 
 //========================================================================
 // Main button events
@@ -61,7 +63,6 @@ function submitImage() {
 function clearImage() {
   // reset selected files
   fileSelect.value = "";
-
   // remove image sources and hide them
   imagePreview.src = "";
   imageDisplay.src = "";
@@ -70,10 +71,12 @@ function clearImage() {
   hide(imagePreview);
   hide(imageDisplay);
   hide(loader);
+  hide(buttonCloth);
   hide(predResult);
   show(uploadCaption);
   imageDisplay.classList.remove("loading");
   document.getElementById('pred-result2').innerHTML = "";
+
 }
 
 function previewFile(file) {
@@ -134,6 +137,8 @@ function displayResult(data) {
   hide(loader);
   //predResult.innerHTML = data.result;
   hide(imageDisplay);
+  hide(panel);
+  show(buttonCloth);
   //displayImage('https://media-exp1.licdn.com/dms/image/C4D03AQFiMJ8MbeNmrQ/profile-displayphoto-shrink_200_200/0?e=1590019200&v=beta&t=XjlSBOZZGmwMJGjQd3EcsVbA3wkLfQCezlDFS3zlj5A','pred-result');
   display_grid(data);
 }
@@ -156,8 +161,20 @@ function display_grid(data){
     var i, obj = JSON.parse(data);
     var text = '';
     for (i in obj) {
-        var img = new Image()
-        img.src = obj[i]['images.model']
-        document.getElementById('pred-result2').appendChild(img)
+        //
+        var newDiv = document.createElement("div");
+        //
+        var shortDescription = document.createElement("p"), Price = document.createElement("p"), img = new Image();
+        img.src = obj[i]['images.model'];
+        img.className = 'img-demo';
+        newDiv.appendChild(img);
+        //
+        shortDescription.innerText = obj[i]['shortDescription'];
+        newDiv.appendChild(shortDescription);
+        //
+        Price.innerText = obj[i]['priceInfo.finalPrice'];
+        newDiv.appendChild(Price);
+        //
+        document.getElementById('pred-result2').appendChild(newDiv);
     }
 }

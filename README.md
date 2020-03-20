@@ -1,3 +1,5 @@
+### FIND FOR ME
+
 - depeloped a recommendation system to find affordable alternatites for luxury clothes (or any other clothes)
 - collected a database containing around 190k items 
 - automatic data scraping pipeline for different retail websites 
